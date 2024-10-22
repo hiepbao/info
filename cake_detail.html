@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Management - Portfolio Details</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #portfolio-details .portfolio-details-slider {
+            max-width: 100%;
+            height: auto;
+        }
+        #portfolio-details .swiper-slide img {
+            width: 100%;
+            height: auto;
+            max-width: 500px; 
+            max-height: 500px; 
+            display: block;
+            object-fit: contain;
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center" id="swiperContainer">
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Mobile</li>
+                            <li><strong>Project date</strong>: 2024</li>
+                            <li><strong>Source code</strong>: <a href="https://github.com/hiepbao/CakeSalesApp" target="_blank">https://github.com/hiepbao/CakeSalesApp</a></li>
+                        </ul>                        
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Cake Sales</h2>
+                        <p>
+                            Our Cake sales app provides customers with a seamless shopping experience, with a user-friendly interface dedicated to browsing and buying cake online. With an integrated online payment system, shoppers can complete transactions securely and easily, ensuring convenience and peace of mind. Furthermore, our platform includes an intuitive admin panel, giving administrators complete control to manage products with ease. From adding new items to editing existing listings or removing outdated items, the admin panel simplifies inventory management for seamless operations. With a focus on customer satisfaction and efficient management, our app caters to the needs of both buyers and sellers in the ever-evolving e-commerce landscape.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <b>Technogy used:</b>
+                            <span class="badge bg-warning text-dark">Flutter</span>
+                            <span class="badge bg-danger">Firebase</span>
+                            <span class="badge bg-success">C#</span>
+                            <span class="badge bg-primary">ASP.NET Core API</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lightbox = GLightbox({
+                selector: '.portfolio-lightbox'
+            });
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+    <script>
+        const swiperContainer = document.getElementById('swiperContainer');
+        for (let i = 1; i <= 24; i++) {
+            swiperContainer.innerHTML += `
+                <div class="swiper-slide">
+                    <img src="assets/cake/cake${i}.png" alt="GHK2P Delivery Step ${i}">
+                </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Management - Portfolio Details</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #portfolio-details .portfolio-details-slider {
+            max-width: 100%;
+            height: auto;
+        }
+        #portfolio-details .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center" id="swiperContainer">
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Website and Mobile</li>
+                            <li><strong>Project date</strong>: 2023</li>
+                            <li><strong>Source code</strong>: <a href="https://github.com/hiepbao/Delivery" target="_blank">https://github.com/hiepbao/Delivery</a></li>
+                        </ul>                        
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Delivery Management</h2>
+                        <p>
+                            Our delivery management website offers a comprehensive system for efficiently overseeing the delivery process, catering to the needs of businesses seeking seamless logistics solutions. With a robust admin interface, managers can effortlessly oversee the entire delivery system, from scheduling routes to tracking packages in real-time. Additionally, our platform extends support through a dedicated mobile application, empowering delivery personnel with the tools they need to navigate routes efficiently and ensure timely deliveries. Seamlessly integrating web-based management with mobile functionality, our solution optimizes delivery operations for enhanced productivity and customer satisfaction.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <b>Technogy used:</b>
+                            <span class="badge bg-danger">C#</span>
+                            <span class="badge bg-primary">ASP.NET</span>
+                            <span class="badge bg-success">NodeJS</span>
+                            <span class="badge bg-warning text-dark">Flutter</span>
+                            <span class="badge bg-danger">HTML5</span>
+                            <span class="badge bg-info text-dark">JavaScript</span>
+                            <span class="badge bg-secondary">CSS</span>
+                            <span class="badge bg-dark">SQL Server</span>
+                            <span class="badge bg-light text-dark">T-SQL</span>
+                            <span class="badge bg-success">Bootstrap</span>
+                            <span class="badge bg-primary">MVC</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lightbox = GLightbox({
+                selector: '.portfolio-lightbox'
+            });
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+
+    <script>
+        const swiperContainer = document.getElementById('swiperContainer');
+        for (let i = 1; i <= 15; i++) {
+            swiperContainer.innerHTML += `
+                <div class="swiper-slide">
+                    <img src="assets/delivery/delivery_${i}.png" alt="GHK2P Delivery Step ${i}">
+                </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>

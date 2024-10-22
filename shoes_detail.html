@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Store - Portfolio Details</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #portfolio-details .portfolio-details-slider {
+            max-width: 100%;
+            height: auto;
+        }
+        #portfolio-details .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+
+                            <div class="swiper-slide">
+                                <img src="assets/shoes/shoes_1.png" alt="GHK2P Delivery">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/shoes/shoes_2.png" alt="GHK2P Delivery">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/shoes/shoes_3.png" alt="GHK2P Delivery">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/shoes/shoes_4.png" alt="GHK2P Delivery">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/shoes/shoes_5.png" alt="GHK2P Delivery">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/shoes/shoes_6.png" alt="GHK2P Delivery">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/shoes/shoes_7.png" alt="GHK2P Delivery">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/shoes/shoes_8.png" alt="GHK2P Delivery">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Website</li>
+                            <li><strong>Project date</strong>: 2023</li>
+                            <li><strong>Source code</strong>: <a href="https://github.com/hiepbao/ShoeStore" target="_blank">https://github.com/hiepbao/ShoeStore</a></li>
+                        </ul>                        
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Shoes Store Website</h2>
+                        <p>
+                            Our shoe-selling website provides customers with a seamless shopping experience, featuring a user-friendly interface dedicated to browsing and purchasing footwear online. With an integrated online payment system, shoppers can securely complete transactions with ease, ensuring convenience and peace of mind. Moreover, our platform includes an intuitive admin panel, granting administrators full control to manage products effortlessly. From adding new arrivals to editing existing listings or removing outdated items, the admin page simplifies inventory management for seamless operation. With a focus on both customer satisfaction and efficient backend management, our website caters to the needs of both buyers and sellers in the ever-evolving e-commerce landscape.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <b>Technogy used:</b>
+                            <span class="badge bg-danger">C#</span>
+                            <span class="badge bg-primary">ASP.NET</span>
+                            <span class="badge bg-danger">HTML5</span>
+                            <span class="badge bg-info text-dark">JavaScript</span>
+                            <span class="badge bg-secondary">CSS</span>
+                            <span class="badge bg-dark">SQL Server</span>
+                            <span class="badge bg-light text-dark">T-SQL</span>
+                            <span class="badge bg-success">Bootstrap</span>
+                            <span class="badge bg-primary">MVC</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lightbox = GLightbox({
+                selector: '.portfolio-lightbox'
+            });
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
