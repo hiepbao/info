@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Management - Portfolio Details</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #portfolio-details .portfolio-details-slider {
+            max-width: 100%;
+            height: auto;
+        }
+        #portfolio-details .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center" id="swiperContainer">
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: App </li>
+                            <li><strong>Project date</strong>: 2023</li>
+                            <li><strong>Source code</strong>: <a href="https://github.com/hiepbao/GameTheKingJava" target="_blank">https://github.com/hiepbao/GameTheKingJava</a></li>
+                        </ul>                        
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>TheKing game</h2>
+                        <p>
+                            Our TheKing game platform offers players a captivating and seamless experience, with a user-friendly interface designed for easy navigation and gameplay in a dynamic world of strategy and conquest. Featuring an integrated account and save system, players can securely save their progress, track achievements, and resume battles anytime, ensuring convenience and continuity. Additionally, our platform includes an intuitive admin dashboard, providing full control to game administrators for efficient management of game events, updates, and in-game content. Whether it's launching new campaigns, adjusting gameplay balance, or removing outdated features, the admin dashboard simplifies the management process for smooth, uninterrupted gameplay. With a focus on delivering an immersive experience and efficient game administration, our TheKing platform caters to the needs of both players and developers in the competitive world of strategic gaming.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <b>Technogy used:</b>
+                            <span class="badge bg-danger">Java</span>
+                            <span class="badge bg-primary">MySql</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lightbox = GLightbox({
+                selector: '.portfolio-lightbox'
+            });
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+
+    <script>
+        const swiperContainer = document.getElementById('swiperContainer');
+        for (let i = 1; i <= 13; i++) {
+            swiperContainer.innerHTML += `
+                <div class="swiper-slide">
+                    <img src="assets/game1/theking${i}.png" alt="GHK2P Delivery Step ${i}">
+                </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>
