@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Management - Portfolio Details</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #portfolio-details .portfolio-details-slider {
+            max-width: 100%;
+            height: auto;
+        }
+        #portfolio-details .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center" id="swiperContainer">
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Web App </li>
+                            <li><strong>Project date</strong>: 12-2024</li>
+                            <li><strong>Link</strong>: <a href="http://app.detchun.com/" target="_blank">http://app.detchun.com/</a></li>
+                        </ul>                        
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Detchun</h2>
+                        <p>
+                             Objective: <br>
+                                The Detchun ERP WebApp was developed to meet the comprehensive management and monitoring needs of Detchun's core business operations, including quotations, delivery management, inventory, receivables, and loading processes. This solution enhances operational efficiency and provides detailed, transparent reports to support quick and accurate decision-making. The multi-language system is designed to accommodate branch employees in different countries.
+                            <br>
+                            Results and Benefits Achieved: <br>
+
+                                Minimized time for manual report compilation.
+                                Improved monitoring and management capabilities through visual reports and an automated alert system.
+                                Increased accuracy in tracking transactions and customer receivables.
+                                Enhanced performance in processing large data sets with advanced technology solutions.
+                            <br>
+                            Overall Evaluation: <br>
+                                The Detchun WebApp has become a powerful tool for Detchun in managing critical business processes, ensuring timely, accurate, and synchronized information. Its simple, user-friendly interface is compatible with both mobile phones and computers, with dedicated pages for each category, allowing users to easily track and retrieve detailed information. This is a significant milestone in the company's digital transformation journey, strengthening its competitive edge in the market.    
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <b>Technogy used:</b>
+                            <span class="badge bg-danger">C#</span>
+                            <span class="badge bg-primary">ASP.NET core API</span>
+                            <span class="badge bg-warning text-dark">ASP.NET core MVC</span>
+                            <span class="badge bg-danger">HTML5</span>
+                            <span class="badge bg-info text-dark">JavaScript</span>
+                            <span class="badge bg-secondary">CSS</span>
+                            <span class="badge bg-dark">SQL Server</span>
+                            <span class="badge bg-light text-dark">T-SQL</span>
+                            <span class="badge bg-success">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lightbox = GLightbox({
+                selector: '.portfolio-lightbox'
+            });
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+
+    <script>
+        const swiperContainer = document.getElementById('swiperContainer');
+        for (let i = 1; i <= 12; i++) {
+            swiperContainer.innerHTML += `
+                <div class="swiper-slide">
+                    <img src="assets/detchun/Detchun${i}.png" alt="GHK2P Delivery Step ${i}">
+                </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>
